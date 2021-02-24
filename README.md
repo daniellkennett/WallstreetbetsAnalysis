@@ -17,6 +17,26 @@ https://www.kaggle.com/unanimad/reddit-rwallstreetbets
           **author:** original poster<br />
           **comments:** number of comments<br />
           **timestamp:** unix time when posted<br />
+          
+          
+Additionally I used Alpha Vantage's API to gather stock data to compare.
+
+
+**Columns:** <br />
+          **date:** unique identifier <br />
+          **open:** string of characters used for the post<br />
+          **high:** number of upvotes<br />
+          **low:** original poster<br />
+          **close:** number of comments<br />
+          **volume:** unix time when posted<br />
+
+# Goal
+
+
+1. How much was Wallstreetbets posting about meme stocks?
+2. 
+
+
 
 
 ## Welcome to GitHub Pages
