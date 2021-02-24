@@ -1,8 +1,21 @@
 # WallstreetbetsAnalysis
 
 
-The intent of this project is to examine the wallstreetbets subreddit as compared to the daily movements of key stocks from December 31st, 2020 to February 16th, 2021. The magnum opus of Gamestop was on January 27th, 2021 when the stock almost hit $350-- approximately 20x the amount it was worth a month prior. This event is significant because it proves that individual investors can influence the markets. The introduction of free and easy investing/trading has brought forth an age where mass movements can sway the markets. 
+In the last year, investors have coined a new term: the 'meme stock'. These meme stocks are characterized by large amounts of uncertainty in short timespans and hype in small online communities. Reddit, more specifically it's subreddit Wallstreetbets, is one of these "small communities currently having close to 10 million subscribers. This thread is accustomed to users making bold claims about security movements. This culminated to January 27th where Gamestop Corporations stock grew approximately 2600% to $483 in about a month. This significant event proves that individual investors hold some influence over the market. The introduction of free and easy investing/trading has brought forth an age where individuals can sway the markets. 
 
+# Data set
+
+
+The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. 
+https://www.kaggle.com/unanimad/reddit-rwallstreetbets
+
+
+**Columns:** {id: unique identifier
+          title: string of characters used for the post
+          score: number of upvotes
+          author: original poster
+          comments: number of comments
+          timestampt: unix time when posted}
 
 
 ## Welcome to GitHub Pages
