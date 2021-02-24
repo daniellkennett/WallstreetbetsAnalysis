@@ -10,12 +10,13 @@ The data set I worked is a combination of Reddit's API (PRAW) and data by Raphae
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
 
-**Columns:** {id: unique identifier
-          title: string of characters used for the post
-          score: number of upvotes
-          author: original poster
-          comments: number of comments
-          timestampt: unix time when posted}
+**Columns:** <br />
+          **id:** unique identifier <br />
+          **title:** string of characters used for the post<br />
+          **score:** number of upvotes<br />
+          **author:** original poster<br />
+          **comments:** number of comments<br />
+          **timestamp:** unix time when posted<br />
 
 
 ## Welcome to GitHub Pages
