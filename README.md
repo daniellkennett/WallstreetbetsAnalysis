@@ -49,4 +49,27 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 ![Top 30 Words](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/download%20(1).png/)
 
 
-{% include Mentions in WSB.html %}
+![Daily Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20Candlestick.png)
+
+
+![Early Mention vs Daily Stock](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Early%20Mentions%20vs%20Daily%20Stock%20Change.png)
+
+
+![Daily GME Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20GME%20Mentions.png)
+
+
+![GME Hourly Price vs Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
+
+
+
+![GME Daily Price vs Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/GME%20Price%20vs%20Mentions.png)
+
+
+![Hourly Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Hourly%20Candlestick.png)
+
+
+
+![Mentions in WSB](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Mentions%20in%20WSB.png)
+
+
+![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
