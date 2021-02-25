@@ -69,7 +69,7 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 
 
 
-![Mentions in WSB](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Mentions%20in%20WSB.png)
+![Mentions in WSB](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Mentions%20in%20WSB.png)
 
 
-![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
+![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
