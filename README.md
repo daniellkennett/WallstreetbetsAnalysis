@@ -6,7 +6,7 @@ In the last year, investors have coined a new term: the 'meme stock'. These meme
 # Data set
 
 
-The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset was very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021.
+The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset is very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021.
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
 
@@ -64,7 +64,7 @@ gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()
 
 
 1. How much was Wallstreetbets posting about meme stocks?
-2. Which meme stock was mention most?
+2. Which meme stock was mentioned most?
 3. GME stock chart? Growth?
 4. Are WSB mentions of GME related to the price increase?
 
@@ -89,8 +89,20 @@ Mentioned in the word cloud are: GME, AMC, NOK, and DOGE. These securities are G
 Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft and the S&P500 index fund; The four mentioned memestocks have more mentions. 
 
 
-# 2. Which meme stock was mention most?
-**Insert Table Here**
+# 2. Which meme stock was mentioned most?
+```python
+Stock	Count	
+sp500	30
+msft	44
+amzn	619
+btc	1578
+tsla	2717
+doge	15703
+nok	20994
+amc	45965
+gme	102785
+```
+
 ![Mentions in WSB](Images/Mentions%20in%20WSB.png)
 
 
@@ -140,7 +152,20 @@ Name: percent change, dtype: float64
 ![Percent Change](Images/Percentage%20GME%20Change.png)
 
 
-Gamestop's stock price fluctuated immensely. At times the stock gained or lost 40% in a single hour. 
+Gamestop's stock price fluctuated immensely. At times the stock gained or lost 40% in a single hour. Another statistic to notice is the 50 percentile of both. Since the stock rose and fell to similar levels, this appears reasonable. 
+
+# 4. Are WSB mentions of GME related to the price increase?
+
+
+![GME Daily Price vs Mentions](Images/GME%20Price%20vs%20Mentions.png)
+
+
+Yes, they are related. The nature of meme stock imply that they inspire hype amongst individual investors. Additionally, large events like these are covered by news outlets and spread to many social media outlets. The manner in which media portrays stocks has an impact on the buyers and sellers of the securities. 
+
+On closer inspection, there are mini-spikes in mentions before major increases in prices. 
+
+
+![GME Hourly Price vs Mentions](Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
 
 
 
@@ -150,11 +175,11 @@ Gamestop's stock price fluctuated immensely. At times the stock gained or lost 4
 
 
 
-![GME Hourly Price vs Mentions](Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
 
 
 
-![GME Daily Price vs Mentions](Images/GME%20Price%20vs%20Mentions.png)
+
+
 
 
 
