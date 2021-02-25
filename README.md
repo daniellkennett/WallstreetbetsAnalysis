@@ -49,7 +49,7 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 ![Top 30 Words](Images/download%20(1).png/)
 
 
-![Daily Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20Candlestick.png)
+![Daily Candlestick](Images/Daily%20Candlestick.png)
 
 
 ![Early Mention vs Daily Stock](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Early%20Mentions%20vs%20Daily%20Stock%20Change.png)
