@@ -28,7 +28,8 @@ from alpha_vantage.timeseries import TimeSeries
 
 API_key = 'OZHBQ2Q48QC0NFRZ'
 
-```### daily chart, include percent change ###
+```python
+### daily chart, include percent change ###
 ts = TimeSeries(key = API_key,output_format='pandas')
 data = ts.get_daily_adjusted('GME')
 gme = data[0].reset_index()
