@@ -46,7 +46,7 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 * **H0** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES NOT influence the stock growth <br />
   **H1** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
 
-![Top 30 Words](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/download%20(1).png/)
+![Top 30 Words](Images/download%20(1).png/)
 
 
 ![Daily Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20Candlestick.png)
