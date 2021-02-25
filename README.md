@@ -24,11 +24,13 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 
 ### Use alpha vantage to gather daily and hourly stock data ###
 
+
+```python
 from alpha_vantage.timeseries import TimeSeries
 
 API_key = 'OZHBQ2Q48QC0NFRZ'
 
-```python
+
 ### daily chart, include percent change ###
 ts = TimeSeries(key = API_key,output_format='pandas')
 data = ts.get_daily_adjusted('GME')
@@ -44,7 +46,8 @@ gme_hourly_full = gme[(gme['date'] >= '2020-12-31') & (gme['date'] <= '2021-02-1
 gme_hourly_full = gme_hourly_full.sort_values('date', ascending=True)
 gme_hourly = gme[(gme['date'] >= '2021-01-25') & (gme['date'] <= '2021-01-29')]
 gme_hourly = gme_hourly.sort_values('date', ascending=True)
-gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()'''
+gme_hourly['percent change'] = gme_hourly['4. close'].pct_change() 
+```
 
 
 
@@ -108,7 +111,8 @@ Daily Candlestick
 Observed in Gamestops stock prices is the steady price of around $18 until mid January. Media and hype carried the stock up to record hieghts. As more investored experienced FOMO and gave into emotional investing, the stock reached ~$500 on January 28th.
 
 **Hourly Change Data**
-``count    472.000000
+```python
+count    472.000000
 mean       0.004323
 std        0.086254
 min       -0.437637
@@ -116,10 +120,12 @@ min       -0.437637
 50%        0.000000
 75%        0.015459
 max        0.535226
-Name: percent change, dtype: float64``
+Name: percent change, dtype: float64
+```
 
 **Daily Change Data**
-``count    30.000000
+```python
+count    30.000000
 mean      0.068010
 std       0.334279
 min      -0.615414
@@ -127,7 +133,8 @@ min      -0.615414
 50%       0.032281
 75%       0.232600
 max       0.996509
-Name: percent change, dtype: float64``
+Name: percent change, dtype: float64
+```
 
 
 ![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
