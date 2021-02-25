@@ -91,16 +91,16 @@ Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft a
 
 # 2. Which meme stock was mention most?
 **Insert Table Here**
-![Mentions in WSB](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Mentions%20in%20WSB.png)
+![Mentions in WSB](Images/Mentions%20in%20WSB.png)
 
 
-![Daily GME Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20GME%20Mentions.png)
+![Daily GME Mentions](Images/Daily%20GME%20Mentions.png)
 
 
 # 3. GME stock chart? Growth?
 
 GME Hourly price
-![Hourly Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Hourly%20Candlestick.png)
+![Hourly Candlestick](Images/Hourly%20Candlestick.png)
 
 
 GME Daily Price
@@ -137,24 +137,24 @@ Name: percent change, dtype: float64
 ```
 
 
-![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
+![Percent Change](Images/Percentage%20GME%20Change.png)
 
 
 Gamestop's stock price fluctuated immensely. At times the stock gained or lost 40% in a single hour. 
 
 
 
-![Early Mention vs Daily Stock](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Early%20Mentions%20vs%20Daily%20Stock%20Change.png)
+![Early Mention vs Daily Stock](Images/Early%20Mentions%20vs%20Daily%20Stock%20Change.png)
 
 
 
 
 
-![GME Hourly Price vs Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
+![GME Hourly Price vs Mentions](Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
 
 
 
-![GME Daily Price vs Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/GME%20Price%20vs%20Mentions.png)
+![GME Daily Price vs Mentions](Images/GME%20Price%20vs%20Mentions.png)
 
 
 
