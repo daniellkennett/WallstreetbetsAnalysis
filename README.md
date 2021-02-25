@@ -22,9 +22,9 @@ https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 Additionally I used Alpha Vantage's API to gather stock data to compare.
 
 
-``### Use alpha vantage to gather daily and hourly stock data ###
+### Use alpha vantage to gather daily and hourly stock data ###
 
-from alpha_vantage.timeseries import TimeSeries
+<code> from alpha_vantage.timeseries import TimeSeries
 
 API_key = 'OZHBQ2Q48QC0NFRZ'
 
@@ -45,7 +45,7 @@ gme_hourly_full = gme[(gme['date'] >= '2020-12-31') & (gme['date'] <= '2021-02-1
 gme_hourly_full = gme_hourly_full.sort_values('date', ascending=True)
 gme_hourly = gme[(gme['date'] >= '2021-01-25') & (gme['date'] <= '2021-01-29')]
 gme_hourly = gme_hourly.sort_values('date', ascending=True)
-gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()``
+gme_hourly['percent change'] = gme_hourly['4. close'].pct_change() </code>
 
 
 
