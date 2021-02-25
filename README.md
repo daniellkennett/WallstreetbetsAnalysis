@@ -6,7 +6,7 @@ In the last year, investors have coined a new term: the 'meme stock'. These meme
 # Data set
 
 
-The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset was very messy and requirs a lot of cleanup before it was usable.
+The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset was very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021.
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
 
@@ -20,6 +20,34 @@ https://www.kaggle.com/unanimad/reddit-rwallstreetbets
           
           
 Additionally I used Alpha Vantage's API to gather stock data to compare.
+
+
+``### Use alpha vantage to gather daily and hourly stock data ###
+
+from alpha_vantage.timeseries import TimeSeries
+
+API_key = 'OZHBQ2Q48QC0NFRZ'
+
+### daily chart, include percent change ###
+ts = TimeSeries(key = API_key,output_format='pandas')
+data = ts.get_daily_adjusted('GME')
+gme = data[0].reset_index()
+gme_daily = gme[(gme['date'] >= '2020-12-31') & (gme['date'] <= '2021-02-16')]
+gme_daily.to_csv('gme_daily_prices')
+gme_daily=gme_daily.sort_values('date', ascending=True)
+gme_daily['percent change'] = gme_daily['4. close'].pct_change()
+
+
+### hourly chart, include percent change ###
+data = ts.get_intraday('GME', interval = '60min', outputsize='full')
+gme = data[0].reset_index()
+gme_hourly_full = gme[(gme['date'] >= '2020-12-31') & (gme['date'] <= '2021-02-16')]
+gme_hourly_full = gme_hourly_full.sort_values('date', ascending=True)
+gme_hourly = gme[(gme['date'] >= '2021-01-25') & (gme['date'] <= '2021-01-29')]
+gme_hourly = gme_hourly.sort_values('date', ascending=True)
+gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()``
+
+
 
 
 **Columns:** <br />
@@ -46,17 +74,74 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 * **H0** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES NOT influence the stock growth <br />
   **H1** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
   
-  
-Most mentioned words in Wallstreetbets
+# 1. How much was Wallstreetbets posting about meme stocks?
+Firstly, I think it is worth diving into the number of mentions of each meme stock in the subreddit, Wallstreetbets. In this instance, I created a word counter and found the most mentioned words:
+
+
 ![Top 30 Words](Images/download%20(1).png)
 
+
+Mentioned in the word cloud are: GME, AMC, NOK, and DOGE. These securities are Gamestop, AMC Theaters, Nokia, and DogeCoin respectivley. The behavior of these stocks clasiffies them as memestocks, or in the case of Dogecoin a meme cryptocurrency. 
+
+
+Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft and the S&P500 index fund; The four mentioned memestocks have more mentions. 
+
+
+# 2. Which meme stock was mention most?
+**Insert Table Here**
+![Mentions in WSB](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Mentions%20in%20WSB.png)
+
+
+![Daily GME Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20GME%20Mentions.png)
+
+
+# 3. GME stock chart? Growth?
+
+GME Hourly price
+![Hourly Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Hourly%20Candlestick.png)
+
+
+GME Daily Price
+Daily Candlestick
+![Daily Candlestick](Images/Daily%20Candlestick.png)
+
+
+Observed in Gamestops stock prices is the steady price of around $18 until mid January. Media and hype carried the stock up to record hieghts. As more investored experienced FOMO and gave into emotional investing, the stock reached ~$500 on January 28th.
+
+**Hourly Change Data**
+``count    472.000000
+mean       0.004323
+std        0.086254
+min       -0.437637
+25%       -0.018945
+50%        0.000000
+75%        0.015459
+max        0.535226
+Name: percent change, dtype: float64``
+
+**Daily Change Data**
+``count    30.000000
+mean      0.068010
+std       0.334279
+min      -0.615414
+25%      -0.051929
+50%       0.032281
+75%       0.232600
+max       0.996509
+Name: percent change, dtype: float64``
+
+
+![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
+
+
+Gamestop's stock price fluctuated immensely. At times the stock gained or lost 40% in a single hour. 
 
 
 
 ![Early Mention vs Daily Stock](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Early%20Mentions%20vs%20Daily%20Stock%20Change.png)
 
 
-![Daily GME Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Daily%20GME%20Mentions.png)
+
 
 
 ![GME Hourly Price vs Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
@@ -66,16 +151,7 @@ Most mentioned words in Wallstreetbets
 ![GME Daily Price vs Mentions](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/GME%20Price%20vs%20Mentions.png)
 
 
-Hourly Candlestick
-![Hourly Candlestick](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Hourly%20Candlestick.png)
-
-
-Daily Candlestick
-![Daily Candlestick](Images/Daily%20Candlestick.png)
 
 
 
-![Mentions in WSB](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Mentions%20in%20WSB.png)
 
-
-![Percent Change](https://github.com/daniellkennett/WallstreetbetsAnalysis/blob/main/Images/Percentage%20GME%20Change.png)
