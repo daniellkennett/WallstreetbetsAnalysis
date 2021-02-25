@@ -6,7 +6,7 @@ In the last year, investors have coined a new term: the 'meme stock'. These meme
 # Data set
 
 
-The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. 
+The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset was very messy and requirs a lot of cleanup before it was usable.
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
 
@@ -34,7 +34,17 @@ Additionally I used Alpha Vantage's API to gather stock data to compare.
 
 
 1. How much was Wallstreetbets posting about meme stocks?
-2. 
+2. Which meme stock was mention most?
+3. GME stock chart? Growth?
+4. Are WSB mentions of GME related to the price increase?
+
+### Hypothesis Tests
+
+* **H0** : The number of mentions in the last two hours of trading has no influence of opening prices. <br />
+  **H1** : The number of mentions in the last two hours of trading influences the opening price next day 
+  
+* **H0** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES NOT influence the stock growth <br />
+  **H1** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
 
 
 
