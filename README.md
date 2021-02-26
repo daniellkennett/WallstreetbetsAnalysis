@@ -271,3 +271,12 @@ SpearmanrResult(correlation=-0.0035603027138667903, pvalue=0.9851027762191317)
 ```
 
 The p-value of .985 STRONGLY supports the null hypothesis. 
+
+# Conclusion
+
+This analysis on Wallstreetbets and GME's price makes a lot of assumptions. 
+1. Assumes that GME is the only stock. A better measure would to include all meme stocks. 
+2. Assumed that movements happened on an hourly and daily perspective. A more indepth study can explore smaller time periods. 
+3. Did not consider government or firm intervention. On January 27th, many trading platforms halted the trade of meme stocks. If allowed to continue growing, the two factors MAY have been more correlated. 
+
+As it stands, the first hypothesis states that there is a small negative correlation of mentions to stock growth. Therefore if you invest based off on the number of mentions in an hour, you are more likely to loose money. 
