@@ -119,12 +119,17 @@ gme	102785
 
 # 3. GME stock chart? Growth?
 
+
 GME Hourly price
+
+
 ![Hourly Candlestick](Images/Hourly%20Candlestick.png)
 
 
 GME Daily Price
 Daily Candlestick
+
+
 ![Daily Candlestick](Images/Daily%20Candlestick.png)
 
 
