@@ -1,4 +1,4 @@
-# WallstreetbetsAnalysis
+# WallstreetbetsAnalysis    ![GME](Images/gamestop-original.original.jpg)
 
 # Table of contents
 1. [Introduction](#introduction)
