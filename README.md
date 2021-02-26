@@ -1,22 +1,37 @@
 # WallstreetbetsAnalysis
 
+# Table of contents
+1. [Introduction](#introduction)
+    * [Data set](#introsub1)
+3. [Some paragraph](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+4. [Another paragraph](#paragraph2)
+
+# Introduction <a name="introduction"></a>
+Some introduction text, formatted in heading 2 style
+
+
 
 In the last year, investors have coined a new term: the 'meme stock'. These meme stocks are characterized by large amounts of uncertainty in short timespans and hype in small online communities. Reddit, more specifically it's subreddit Wallstreetbets, is one of these "small communities currently having close to 10 million subscribers. This thread is accustomed to users making bold claims about security movements. This culminated to January 27th where Gamestop Corporations stock grew approximately 2600% to $483 in about a month. This significant event proves that individual investors hold some influence over the market. The introduction of free and easy investing/trading has brought forth an age where individuals can sway the markets. 
 
 Reading material for history of GME or context:https://abcnews.go.com/Business/gamestop-timeline-closer-saga-upended-wall-street/story?id=75617315
 
-# Data set
+## Data set <a name="introsub1"></a>
 
 
-The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset is very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021.
+The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset is very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021. In addition to the PRAW Dataset, I used Alpha Vantage to gather stock data. 
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
+
+
+#### Reddit API(PRAW) Code 
+
 
 <details>
          <summary><b>PRAW Code</b></summary>
 <br>
 
 
-#### Reddit API(PRAW) Code 
+
 ```python
 import praw
 reddit = praw.Reddit(client_id = <ID HERE,
@@ -66,7 +81,7 @@ wsb = pd.DataFrame(topics_dict)
  <br />
 
       
-#### Alpha Vantage API for stock prices
+#### Alpha Vantage API Code
 
 
 <details>
@@ -255,7 +270,7 @@ SpearmanrResult(correlation=-0.0877017386768316, pvalue=0.6449129625582433)
 This image visually represents the LACK of correlation between number of mentions in the first two hours of trading and the growth through the trading day. 
 
 
-### 3. The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
+### 3. The number of mentions of a stock on WSB in the first 2 hours of trading DOES influence the stock growth 
 
 H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
 
