@@ -269,3 +269,4 @@ stats.spearmanr(gme_daily_joined['count'], gme_daily_joined['percent change'])
 SpearmanrResult(correlation=-0.0035603027138667903, pvalue=0.9851027762191317)
 ```
 
+The p-value of .985 STRONGLY supports the null hypothesis. 
