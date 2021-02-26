@@ -5,10 +5,10 @@
     * [Data set](#introsub1)
 3. [Goal](#par1)
     * [Hypothesis Tests](#subpar1)
-4. [How much was Wallstreetbets posting about meme stocks?](#par2)
-5. [GME stock charts](#par3)
-6. [Are WSB mentions of GME related to the price increase?](#par4)
-7. [Running Hypothesis Tests](#par5)
+    * [How much was Wallstreetbets posting about meme stocks?](#par2)
+    * [GME stock charts](#par3)
+    * [Are WSB mentions of GME related to the price increase?](#par4)
+4. [Running Hypothesis Tests](#par5)
 
 # Introduction <a name="introduction"></a>
 
@@ -162,20 +162,19 @@ Mentioned in the word cloud are: GME, AMC, NOK, and DOGE. These securities are G
 
 
 Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft and the S&P500 index fund; The four mentioned memestocks have more mentions. 
+| Stock   | Count    |    
+| :---    | :----:   |  
+| gme     | 102785   | 
+| amc     | 45965    | 
+| nok     | 20994    |
+| dog     | 15703 |
+| tsla    | 2717 |
+| btc     | 1578 |
+|amzn     | 619|
+| msft    | 44|
+| sp500   | 30       |
 
 
-```python
-Stock	Count	
-sp500	30
-msft	44
-amzn	619
-btc	1578
-tsla	2717
-doge	15703
-nok	20994
-amc	45965
-gme	102785
-```
 
 ![Mentions in WSB](Images/Mentions%20in%20WSB.png)
 
@@ -201,30 +200,17 @@ gme	102785
 Observed in Gamestops stock prices is the steady price of around $18 until mid January. Media and hype carried the stock up to record hieghts. As more investored experienced FOMO and gave into emotional investing, the stock reached ~$500 on January 28th.
 
 **Hourly Change Data**
-```python
-count    472.000000
-mean       0.004323
-std        0.086254
-min       -0.437637
-25%       -0.018945
-50%        0.000000
-75%        0.015459
-max        0.535226
-Name: percent change, dtype: float64
-```
 
-**Daily Change Data**
-```python
-count    30.000000
-mean      0.068010
-std       0.334279
-min      -0.615414
-25%      -0.051929
-50%       0.032281
-75%       0.232600
-max       0.996509
-Name: percent change, dtype: float64
-```
+| Stock   | Count    |    
+| :---    | :----:   |  
+| count     | 472   | 
+| mean    | 0.004323965    | 
+| std    | 0.086254    |
+| max     | 0.535226 |
+| min    | -0.437637 |
+| 25%     | -0.018945 |
+|50%     | 0.000000|
+| 75%    | 0.015459|
 
 
 ![Percent Change](Images/Percentage%20GME%20Change.png)
