@@ -11,14 +11,18 @@ Reading material for history of GME or context:https://abcnews.go.com/Business/g
 The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset is very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021.
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
-
-**Columns:** <br />
+<details>
+<summary>**Columns:**</summary>
+<br>
           **id:** unique identifier <br />
           **title:** string of characters used for the post<br />
           **score:** number of upvotes<br />
           **author:** original poster<br />
           **comments:** number of comments<br />
           **timestamp:** unix time when posted<br />
+</details>
+ <br />
+
           
           
 Additionally I used Alpha Vantage's API to gather stock data to compare.
