@@ -12,21 +12,11 @@ The data set I worked is a combination of Reddit's API (PRAW) and data by Raphae
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
 <details>
-         <summary><b>Columns:</b></summary>
-<br>
-          <b>id:</b> unique identifier <br />
-          <b>title:</b> string of characters used for the post<br />
-          <b>score:</b> number of upvotes<br />
-          <b>author:</b> original poster<br />
-          <b>comments:</b> number of comments<br />
-          <b>timestamp:</b> unix time when posted<br />
-</details>
- <br />
-
-<details>
          <summary><b>PRAW Code</b></summary>
 <br>
 
+
+#### Reddit API(PRAW) Code 
 ```python
 import praw
 reddit = praw.Reddit(client_id = <ID HERE,
@@ -61,8 +51,22 @@ wsb = pd.DataFrame(topics_dict)
 
 </details>
 <br />
+
+
+<details>
+         <summary><b>Columns:</b></summary>
+<br>
+          <b>id:</b> unique identifier <br />
+          <b>title:</b> string of characters used for the post<br />
+          <b>score:</b> number of upvotes<br />
+          <b>author:</b> original poster<br />
+          <b>comments:</b> number of comments<br />
+          <b>timestamp:</b> unix time when posted<br />
+</details>
+ <br />
+
       
-## Alpha Vantage API for stock prices
+#### Alpha Vantage API for stock prices
 
 
 <details>
