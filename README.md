@@ -8,6 +8,7 @@
 4. [How much was Wallstreetbets posting about meme stocks?](#par2)
 5. [GME stock charts](#par3)
 6. [Are WSB mentions of GME related to the price increase?](#par4)
+7. [Running Hypothesis Tests](#par5)
 
 # Introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
@@ -241,7 +242,7 @@ Gamestop's stock price fluctuated immensely. At times the stock gained or lost 4
 Yes, they are related. The nature of meme stock imply that they inspire hype amongst individual investors. Additionally, large events like these are covered by news outlets and spread to many social media outlets. The manner in which media portrays stocks has an impact on the buyers and sellers of the securities. 
 To prove this, a spearman's rank correlation is preferred due to the monotonic relationship. 
 
-# Hypothesis Tests
+# Running Hypothesis Tests <a name="par5"></a>
 
 ### 1. The number of mentions in a hour of trading HAS  influence of price change 
 
@@ -282,23 +283,4 @@ H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0
 stats.spearmanr(gme_daily_joined['count'], gme_daily_joined['percent change'])
 SpearmanrResult(correlation=-0.0035603027138667903, pvalue=0.9851027762191317)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
