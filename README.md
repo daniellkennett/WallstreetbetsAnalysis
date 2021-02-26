@@ -11,7 +11,6 @@
 7. [Running Hypothesis Tests](#par5)
 
 # Introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
 
 
 
