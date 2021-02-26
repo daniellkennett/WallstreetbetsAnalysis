@@ -2,6 +2,7 @@
 
 
 In the last year, investors have coined a new term: the 'meme stock'. These meme stocks are characterized by large amounts of uncertainty in short timespans and hype in small online communities. Reddit, more specifically it's subreddit Wallstreetbets, is one of these "small communities currently having close to 10 million subscribers. This thread is accustomed to users making bold claims about security movements. This culminated to January 27th where Gamestop Corporations stock grew approximately 2600% to $483 in about a month. This significant event proves that individual investors hold some influence over the market. The introduction of free and easy investing/trading has brought forth an age where individuals can sway the markets. 
+Reading material for history of GME or context:https://abcnews.go.com/Business/gamestop-timeline-closer-saga-upended-wall-street/story?id=75617315
 
 # Data set
 
@@ -69,9 +70,11 @@ gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()
 4. Are WSB mentions of GME related to the price increase?
 
 ### Hypothesis Tests
-
-* **H0** : The number of mentions in the last two hours of trading has no influence of opening prices. <br />
-  **H1** : The number of mentions in the last two hours of trading influences the opening price next day 
+* **H0** : The number of mentions in a hour of trading HAS NO influence of price change. <br />
+  **H1** : The number of mentions in a hour of trading HAS  influence of price change 
+  
+* **H0** : The number of mentions in the last two hours of trading DOES NOT influence of opening prices. <br />
+  **H1** : The number of mentions in the last two hours of trading DOES influences the opening price next day 
   
 * **H0** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES NOT influence the stock growth <br />
   **H1** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
@@ -161,15 +164,50 @@ Gamestop's stock price fluctuated immensely. At times the stock gained or lost 4
 
 
 Yes, they are related. The nature of meme stock imply that they inspire hype amongst individual investors. Additionally, large events like these are covered by news outlets and spread to many social media outlets. The manner in which media portrays stocks has an impact on the buyers and sellers of the securities. 
+To prove this, a spearman's rank correlation is preferred due to the monotonic relationship. 
 
-On closer inspection, there are mini-spikes in mentions before major increases in prices. 
+# Hypothesis Tests
 
+### 1. 
 
-![GME Hourly Price vs Mentions](Images/GME%20Hourly%20Prive%20vs%20Mentions.png)
+H0: $\rho = 0$
+H1: $\rho \neq 0$
 
+```python
+stats.spearmanr(gmefull['count'],gmefull['percent change'])
 
+SpearmanrResult(correlation=-0.10321609558737457, pvalue=0.02493075330552498)
+```
+
+### 2. 
+
+H0: $\rho = 0$
+H1: $\rho \neq 0$
+
+```python
+stats.spearmanr(growth_vs_hr['count'], growth_vs_hr['percent change'])
+SpearmanrResult(correlation=-0.0877017386768316, pvalue=0.6449129625582433)
+```
 
 ![Early Mention vs Daily Stock](Images/Early%20Mentions%20vs%20Daily%20Stock%20Change.png)
+
+
+This image visually represents the LACK of correlation between number of mentions in the first two hours of trading and the growth through the trading day. 
+
+
+### 3. $\rho$
+
+H0: $\rho = 0$
+H1: $\rho \neq 0$
+
+```python
+stats.spearmanr(gme_daily_joined['count'], gme_daily_joined['percent change'])
+SpearmanrResult(correlation=-0.0035603027138667903, pvalue=0.9851027762191317)
+```
+
+
+
+
 
 
 
