@@ -12,24 +12,62 @@ The data set I worked is a combination of Reddit's API (PRAW) and data by Raphae
 https://www.kaggle.com/unanimad/reddit-rwallstreetbets
 
 <details>
-<summary>**Columns:**</summary>
+         <summary><b>Columns:</b></summary>
 <br>
-          **id:** unique identifier <br />
-          **title:** string of characters used for the post<br />
-          **score:** number of upvotes<br />
-          **author:** original poster<br />
-          **comments:** number of comments<br />
-          **timestamp:** unix time when posted<br />
+          <b>id:</b> unique identifier <br />
+          <b>title:</b> string of characters used for the post<br />
+          <b>score:</b> number of upvotes<br />
+          <b>author:</b> original poster<br />
+          <b>comments:</b> number of comments<br />
+          <b>timestamp:</b> unix time when posted<br />
 </details>
  <br />
 
-          
-          
-Additionally I used Alpha Vantage's API to gather stock data to compare.
+<details>
+         <summary><b>PRAW Code</b></summary>
+<br>
+
+```python
+import praw
+reddit = praw.Reddit(client_id = <ID HERE,
+client_secret = <SPECIAL API KEY HERE>,
+user_agent = <NAME OF PROJECT HERE>,
+username =<USERNAME HERE>,
+password = <PASSWORD HERE>)
 
 
-### Use alpha vantage to gather daily and hourly stock data ###
 
+subreddit = reddit.subreddit('wallstreetbets')
+hot_subreddit = subreddit.new(limit = None)
+
+topics_dict = { "title":[], 
+                "score":[], 
+                "id":[], "url":[],  
+                "comms_num": [], 
+                "created": []}
+
+for submission in hot_subreddit:
+    if submission.score > score and submission.upvote_ratio > upvote_ratio: 
+        topics_dict["title"].append(submission.title)
+        topics_dict["score"].append(submission.score)
+        topics_dict["id"].append(submission.id)
+        topics_dict["url"].append(submission.url)
+        topics_dict["comms_num"].append(submission.num_comments)
+        topics_dict["created"].append(submission.created)
+
+        
+wsb = pd.DataFrame(topics_dict)
+```
+
+</details>
+<br />
+      
+## Alpha Vantage API for stock prices
+
+
+<details>
+         <summary><b>Alpha Vantage Code</b></summary>
+<br>
 
 ```python
 from alpha_vantage.timeseries import TimeSeries
@@ -55,16 +93,25 @@ gme_hourly = gme_hourly.sort_values('date', ascending=True)
 gme_hourly['percent change'] = gme_hourly['4. close'].pct_change() 
 ```
 
+</details>
+<br />
 
 
 
-**Columns:** <br />
-          **date:** unique identifier <br />
-          **open:** string of characters used for the post<br />
-          **high:** number of upvotes<br />
-          **low:** original poster<br />
-          **close:** number of comments<br />
-          **volume:** unix time when posted<br />
+
+<details>
+         <summary><b>Columns:</b></summary>
+<br>
+          <b>date:</b> unique identifier <br />
+          <b>open:</b> opening price<br />
+          <b>high:</b> highest price in time period<br />
+          <b>low:</b> lowest price in time period<br />
+          <b>close:</b> nclosing price<br />
+          <b>volume:</b> number of buys and sells of security<br />
+</details>
+ <br />
+
+
 
 # Goal
 
