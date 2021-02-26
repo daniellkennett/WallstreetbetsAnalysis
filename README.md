@@ -283,5 +283,6 @@ This analysis on Wallstreetbets and GME's price makes a lot of assumptions.
 1. Assumes that GME is the only stock. A better measure would to include all meme stocks. 
 2. Assumed that movements happened on an hourly and daily perspective. A more indepth study can explore smaller time periods. 
 3. Did not consider government or firm intervention. On January 27th, many trading platforms halted the trade of meme stocks. If allowed to continue growing, the two factors MAY have been more correlated. 
+4. All publicity is good publicity. Not true. A Sentimental analysis may be a better fit for this analysis. 
 
 As it stands, the first hypothesis states that there is a small negative correlation of mentions to stock growth. Therefore if you invest based off on the number of mentions in an hour, you are more likely to loose money. 
