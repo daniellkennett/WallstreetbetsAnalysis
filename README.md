@@ -9,6 +9,7 @@
     * [GME stock charts](#par3)
     * [Are WSB mentions of GME related to the price increase?](#par4)
 4. [Running Hypothesis Tests](#par5)
+5. [Conclusion](#con)
 
 # Introduction <a name="introduction"></a>
 
@@ -272,7 +273,7 @@ SpearmanrResult(correlation=-0.0035603027138667903, pvalue=0.9851027762191317)
 
 The p-value of .985 STRONGLY supports the null hypothesis. 
 
-# Conclusion
+# Conclusion <a name="con"></a>
 
 This analysis on Wallstreetbets and GME's price makes a lot of assumptions. 
 1. Assumes that GME is the only stock. A better measure would to include all meme stocks. 
