@@ -168,9 +168,10 @@ To prove this, a spearman's rank correlation is preferred due to the monotonic r
 
 # Hypothesis Tests
 
-### 1. 
+### 1. The number of mentions in a hour of trading HAS  influence of price change 
 
 H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
+
 H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0$">
 
 ```python
@@ -179,9 +180,10 @@ stats.spearmanr(gmefull['count'],gmefull['percent change'])
 SpearmanrResult(correlation=-0.10321609558737457, pvalue=0.02493075330552498)
 ```
 
-### 2. 
+### 2. The number of mentions in the last two hours of trading DOES influences the opening price next day
 
 H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
+
 H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0$">
 
 ```python
@@ -195,9 +197,10 @@ SpearmanrResult(correlation=-0.0877017386768316, pvalue=0.6449129625582433)
 This image visually represents the LACK of correlation between number of mentions in the first two hours of trading and the growth through the trading day. 
 
 
-### 3. $\rho$
+### 3. The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
 
 H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
+
 H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0$">
 
 ```python
