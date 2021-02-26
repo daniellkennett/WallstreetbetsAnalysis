@@ -176,7 +176,8 @@ Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft a
 
 
 
-![Mentions in WSB](Images/Mentions%20in%20WSB.png)
+![Mentions in WSB](Images/Daily%20Mentions%20for%20GME,%20NOK,%20AMC.png?raw=true)
+
 
 
 ### GME specifically
