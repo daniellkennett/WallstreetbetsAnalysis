@@ -146,11 +146,13 @@ gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()
 * **H0** : The number of mentions in a hour of trading HAS NO influence of price change. <br />
   **H1** : The number of mentions in a hour of trading HAS  influence of price change 
   
+* **H0** : The number of mentions of a stock on WSB in the first 2 hours of trading DOES NOT influence the stock growth <br />
+  **H1** : The number of mentions of a stock on WSB in the first 2 hours of trading DOES influence the stock growth 
+  
 * **H0** : The number of mentions in the last two hours of trading DOES NOT influence of opening prices. <br />
   **H1** : The number of mentions in the last two hours of trading DOES influences the opening price next day 
   
-* **H0** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES NOT influence the stock growth <br />
-  **H1** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
+
   
 # 1. How much was Wallstreetbets posting about meme stocks? Which meme stock was mentioned most? <a name="par2"></a>
 Firstly, I think it is worth diving into the number of mentions of each meme stock in the subreddit, Wallstreetbets. In this instance, I created a word counter and found the most mentioned words:
