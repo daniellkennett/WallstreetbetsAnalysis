@@ -170,8 +170,8 @@ To prove this, a spearman's rank correlation is preferred due to the monotonic r
 
 ### 1. 
 
-H0: $\rho = 0$
-H1: $\rho \neq 0$
+H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
+H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0$">
 
 ```python
 stats.spearmanr(gmefull['count'],gmefull['percent change'])
@@ -181,8 +181,8 @@ SpearmanrResult(correlation=-0.10321609558737457, pvalue=0.02493075330552498)
 
 ### 2. 
 
-H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$>
-H1: $\rho \neq 0$
+H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
+H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0$">
 
 ```python
 stats.spearmanr(growth_vs_hr['count'], growth_vs_hr['percent change'])
@@ -197,8 +197,8 @@ This image visually represents the LACK of correlation between number of mention
 
 ### 3. $\rho$
 
-H0: $\rho = 0$
-H1: $\rho \neq 0$
+H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
+H1: <img src="https://render.githubusercontent.com/render/math?math=$\rho \neq 0$">
 
 ```python
 stats.spearmanr(gme_daily_joined['count'], gme_daily_joined['percent change'])
