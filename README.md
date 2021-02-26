@@ -95,24 +95,26 @@ wsb = pd.DataFrame(topics_dict)
 from alpha_vantage.timeseries import TimeSeries
 
 API_key = 'OZHBQ2Q48QC0NFRZ'
-
-
-### daily chart, include percent change ###
 ts = TimeSeries(key = API_key,output_format='pandas')
-data = ts.get_daily_adjusted('GME')
-gme = data[0].reset_index()
-gme_daily = gme[(gme['date'] >= '2020-12-31') & (gme['date'] <= '2021-02-16')]
-gme_daily.to_csv('gme_daily_prices')
-gme_daily=gme_daily.sort_values('date', ascending=True)
-gme_daily['percent change'] = gme_daily['4. close'].pct_change()
-### hourly chart, include percent change ###
-data = ts.get_intraday('GME', interval = '60min', outputsize='full')
-gme = data[0].reset_index()
-gme_hourly_full = gme[(gme['date'] >= '2020-12-31') & (gme['date'] <= '2021-02-16')]
-gme_hourly_full = gme_hourly_full.sort_values('date', ascending=True)
-gme_hourly = gme[(gme['date'] >= '2021-01-25') & (gme['date'] <= '2021-01-29')]
-gme_hourly = gme_hourly.sort_values('date', ascending=True)
-gme_hourly['percent change'] = gme_hourly['4. close'].pct_change() 
+### daily chart, include percent change ###
+
+def stock_pull(stock, startdate, enddate, interval=None):
+    if interval==None:
+        data = ts.get_daily_adjusted(stock)
+        data = data[0].reset_index()
+        data = data[(data['date'] >= startdate) & (data['date'] <= enddate)]
+        data = data.sort_values('date', ascending=True)
+        data['percent change'] = data['4. close'].pct_change()
+    else:
+        data = ts.get_intraday(stock, interval = interval, outputsize='full')
+        data = data[0].reset_index()
+        data = data[(data['date'] >= startdate) & (data['date'] <= enddate)]
+        data=data.sort_values('date', ascending=True)
+        data['percent change'] = data['4. close'].pct_change()
+    return data
+
+gme_hourly = stock_pull('GME', '2020-12-31', '2021-02-16', '60min')
+gme_daily = stock_pull('GME', '2020-12-31', '2021-02-16')
 ```
 
 </details>
