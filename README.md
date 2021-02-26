@@ -3,9 +3,11 @@
 # Table of contents
 1. [Introduction](#introduction)
     * [Data set](#introsub1)
-3. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-4. [Another paragraph](#paragraph2)
+3. [Goal](#par1)
+    * [Hypothesis Tests](#subpar1)
+4. [How much was Wallstreetbets posting about meme stocks?](#par2)
+5. [GME stock charts](#par3)
+6. [Are WSB mentions of GME related to the price increase?](#par4)
 
 # Introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
@@ -16,7 +18,7 @@ In the last year, investors have coined a new term: the 'meme stock'. These meme
 
 Reading material for history of GME or context:https://abcnews.go.com/Business/gamestop-timeline-closer-saga-upended-wall-street/story?id=75617315
 
-## Data set <a name="introsub1"></a>
+## Data sets <a name="introsub1"></a>
 
 
 The data set I worked is a combination of Reddit's API (PRAW) and data by Raphael Fontes. PRAW is limited to the last 1000 posts, so I had to rely on individuals who collect the data. ** WARNING ** The dataset is very messy and requires a lot of cleanup before it is usable. For the purpose of this analysis, the data set specifically focuses between December 31st, 2020 to February 16th-- to observe the events of meme stocks in 2021. In addition to the PRAW Dataset, I used Alpha Vantage to gather stock data. 
@@ -132,15 +134,14 @@ gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()
 
 
 
-# Goal
+# Goals <a name="par1"></a>
 
 
-1. How much was Wallstreetbets posting about meme stocks?
-2. Which meme stock was mentioned most?
-3. GME stock chart? Growth?
-4. Are WSB mentions of GME related to the price increase?
+1. How much was Wallstreetbets posting about meme stocks? Which meme stock was mentioned most?
+2. GME stock charts
+3. Are WSB mentions of GME related to the price increase?
 
-### Hypothesis Tests
+### Hypothesis Tests <a name="subpar1"></a>
 * **H0** : The number of mentions in a hour of trading HAS NO influence of price change. <br />
   **H1** : The number of mentions in a hour of trading HAS  influence of price change 
   
@@ -150,7 +151,7 @@ gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()
 * **H0** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES NOT influence the stock growth <br />
   **H1** : The number of mentions of a stock on WSB in the first 1-1/2 hours of trading DOES influence the stock growth 
   
-# 1. How much was Wallstreetbets posting about meme stocks?
+# 1. How much was Wallstreetbets posting about meme stocks? Which meme stock was mentioned most? <a name="par2"></a>
 Firstly, I think it is worth diving into the number of mentions of each meme stock in the subreddit, Wallstreetbets. In this instance, I created a word counter and found the most mentioned words:
 
 
@@ -163,7 +164,6 @@ Mentioned in the word cloud are: GME, AMC, NOK, and DOGE. These securities are G
 Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft and the S&P500 index fund; The four mentioned memestocks have more mentions. 
 
 
-# 2. Which meme stock was mentioned most?
 ```python
 Stock	Count	
 sp500	30
@@ -180,10 +180,12 @@ gme	102785
 ![Mentions in WSB](Images/Mentions%20in%20WSB.png)
 
 
+### GME specifically
+
 ![Daily GME Mentions](Images/Daily%20GME%20Mentions.png)
 
 
-# 3. GME stock chart? Growth?
+# 2. GME stock chart? Growth? <a name="par3"></a>
 
 
 
@@ -230,7 +232,7 @@ Name: percent change, dtype: float64
 
 Gamestop's stock price fluctuated immensely. At times the stock gained or lost 40% in a single hour. Another statistic to notice is the 50 percentile of both. Since the stock rose and fell to similar levels, this appears reasonable. 
 
-# 4. Are WSB mentions of GME related to the price increase?
+# 3. Are WSB mentions of GME related to the price increase? <a name="par4"></a>
 
 
 ![GME Daily Price vs Mentions](Images/GME%20Price%20vs%20Mentions.png)
@@ -253,7 +255,7 @@ stats.spearmanr(gmefull['count'],gmefull['percent change'])
 SpearmanrResult(correlation=-0.10321609558737457, pvalue=0.02493075330552498)
 ```
 
-### 2. The number of mentions in the last two hours of trading DOES influences the opening price next day
+### 2. The number of mentions of a stock on WSB in the first 2 hours of trading DOES influence the stock growth 
 
 H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
 
@@ -270,7 +272,7 @@ SpearmanrResult(correlation=-0.0877017386768316, pvalue=0.6449129625582433)
 This image visually represents the LACK of correlation between number of mentions in the first two hours of trading and the growth through the trading day. 
 
 
-### 3. The number of mentions of a stock on WSB in the first 2 hours of trading DOES influence the stock growth 
+### 3. The number of mentions in the last two hours of trading DOES influences the opening price next day
 
 H0: <img src="https://render.githubusercontent.com/render/math?math=$\rho=0$">
 
