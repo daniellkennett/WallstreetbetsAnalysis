@@ -128,7 +128,7 @@ gme_hourly['percent change'] = gme_hourly['4. close'].pct_change()
           <b>open:</b> opening price<br />
           <b>high:</b> highest price in time period<br />
           <b>low:</b> lowest price in time period<br />
-          <b>close:</b> nclosing price<br />
+          <b>close:</b> closing price<br />
           <b>volume:</b> number of buys and sells of security<br />
 </details>
  <br />
@@ -161,7 +161,7 @@ Firstly, I think it is worth diving into the number of mentions of each meme sto
 ![Top 30 Words](Images/download%20(1).png)
 
 
-Mentioned in the word cloud are: GME, AMC, NOK, and DOGE. These securities are Gamestop, AMC Theaters, Nokia, and DogeCoin respectivley. The behavior of these stocks clasiffies them as memestocks, or in the case of Dogecoin a meme cryptocurrency. 
+Mentioned in the word cloud are: GME, AMC, NOK, and DOGE. These securities are Gamestop, AMC Theaters, Nokia, and DogeCoin respectivley. The behavior of these stocks classifies them as memestocks, or in the case of Dogecoin a meme cryptocurrency. 
 
 
 Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft and the S&P500 index fund; The four mentioned memestocks have more mentions. 
@@ -201,7 +201,7 @@ Compared to other popular securities such as Tesla, Bitcoin, Amazon, Microsoft a
 ![Daily Candlestick](Images/Daily%20Candlestick.png)
 
 
-Observed in Gamestops stock prices is the steady price of around $18 until mid January. Media and hype carried the stock up to record hieghts. As more investored experienced FOMO and gave into emotional investing, the stock reached ~$500 on January 28th.
+Observed in Gamestops stock prices is the steady price of around $18 until mid January. Media and hype carried the stock up to record heights. As more investors experienced FOMO and gave into emotional investing, the stock reached ~$500 on January 28th.
 
 **Hourly Change Data**
 
